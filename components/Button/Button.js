@@ -1,13 +1,13 @@
-import { colors, fontSize } from '../../styles/theme';
+import { colors, fontSize } from "../../styles/theme";
 
 export const Button = () => {
-	const onClick = () => {
-		console.log('Este botón no hace nada');
-	};
-	return (
-		<>
-			<button onClick={onClick}></button>
-			<style jsx>{`
+  const onClick = () => {
+    console.log("Este botón no hace nada");
+  };
+  return (
+    <>
+      <button onClick={onClick}></button>
+      <style jsx>{`
         button {
           background: ${colors.lightOrange};
           border: 0;
@@ -23,6 +23,6 @@ export const Button = () => {
           opacity: .7;
         }
       `}</style>
-		</>
-	);
+    </>
+  );
 };

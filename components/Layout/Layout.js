@@ -18,8 +18,8 @@ export const Layout = ({ children }) => {
 			<main className='main'>{children}</main>
 			<footer className='footer'>
 				<a href='https://github.com/JorgeArancibia1'>
-					Made by <span className='dark-orange'> &nbsp;Jorge Arancibia&nbsp; </span> for
-					Houm ❤️
+					Made by
+					<span className='dark-orange'> &nbsp;Jorge Arancibia&nbsp; </span> for Houm ❤️
 					<span>
 						<Image
 							src='https://houm.com/static/brandImage/houmLogo.svg'
@@ -31,12 +31,12 @@ export const Layout = ({ children }) => {
 				</a>
 			</footer>
 			<style jsx>{`
-				.orange {
+				/* .orange {
 					color: #f67c40;
 				}
 				.dark-orange {
 					color: #ff452b;
-				}
+				} */
 				.footer {
 					display: flex;
 					flex: 1;

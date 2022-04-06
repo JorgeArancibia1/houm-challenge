@@ -1,6 +1,5 @@
 import Head from 'next/head';
-import styles from '../styles/Home.module.css';
-import { Layout } from '../components/Layout/Layout';
+import { Layout } from '../components/Layout';
 
 export default function Home() {
 	return (
@@ -11,7 +10,7 @@ export default function Home() {
 				<link rel='icon' href='https://houm.com/static/brandImage/houmLogo.svg' />
 			</Head>
 
-			<Layout className={styles.main}>HOME</Layout>
+			<Layout>HOME</Layout>
 			<style jsx>{``}</style>
 		</>
 	);

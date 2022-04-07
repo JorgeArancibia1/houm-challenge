@@ -1,9 +1,9 @@
 import { FC, ReactNode } from 'react';
 import styles from './layoutStyle';
-import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
-import { Navbar } from '../Ui';
 import Head from 'next/head';
+import { Navbar } from '../Ui';
+import { Header } from '../Header';
 
 interface Props {
 	title?: string;

@@ -12,12 +12,12 @@ interface Props {
 }
 
 const Home: NextPage<Props> = ({ pokemons }) => {
-	console.log(pokemons);
 	return (
 		<>
 			<Head>
 				<title>Houm Challenge</title>
 				<meta name='description' content='' />
+				<meta name='author' content='Jorge Arancibia' />
 				<link rel='icon' href='https://houm.com/static/brandImage/houmLogo.svg' />
 			</Head>
 
@@ -35,7 +35,7 @@ const Home: NextPage<Props> = ({ pokemons }) => {
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
 	const { data } = await pokemon.get<PokemonResult>('/pokemon?limit=10');
-	console.log(data);
+	// console.log(data);
 
 	const pokemons: PokemonList[] = data.results.map((p, i) => ({
 		...p,
@@ -54,7 +54,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 	return {
 		props: {
 			pokemons,
-		}, // will be passed to the page component as props
+		},
 	};
 };
 

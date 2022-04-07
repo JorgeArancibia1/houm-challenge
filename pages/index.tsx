@@ -1,10 +1,9 @@
 import Head from 'next/head';
-import { Hero } from '../components/Hero/Hero';
 import { Layout } from '../components/Layout/Layout';
 import { NextPage, GetStaticProps } from 'next';
 import { pokemon } from '../api';
 import { PokemonList, PokemonResult } from '../interfaces';
-import { Card, Grid, Row, Text } from '@nextui-org/react';
+import { Grid } from '@nextui-org/react';
 import { PokemonCard } from '../components/Pokemon';
 
 interface Props {

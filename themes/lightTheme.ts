@@ -1,11 +1,11 @@
 import { createTheme } from '@nextui-org/react';
 
-export const darkTheme = createTheme({
-	type: 'dark',
+export const lightTheme = createTheme({
+	type: 'light',
 	theme: {
 		colors: {
 			// generic colors
-			white: '#FCDBD7',
+			white: '#ffffff',
 			black: '#212121',
 			//semantic colors
 			blue100: '#f67c40',
@@ -19,8 +19,8 @@ export const darkTheme = createTheme({
 
 			secondaryLight: '#f67c40',
 			secondary: '#f67c40',
-			secondaryDark: '#f67c40',
-			secondaryShadow: '#f67c40',
+			secondaryDark: '#FCDBD7',
+			secondaryShadow: '#FCDBD7',
 
 			successLight: '#f67c40',
 			success: '#f67c40',

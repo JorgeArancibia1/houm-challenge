@@ -1,5 +1,5 @@
 import NextLink from 'next/link';
-import { Container, Link, Spacer, Text, Grid, Image, Row } from '@nextui-org/react';
+import { Container, Link, Text, Grid, Image, Row } from '@nextui-org/react';
 
 export const Header = () => {
 	return (

@@ -2,12 +2,12 @@
 
 import { Layout } from '../../components/Layout';
 import { GetStaticProps, NextPage } from 'next';
-import { Pokemon } from '../../interfaces';
+import { CompletePokemon } from '../../interfaces';
 import { pokemon } from '../../api';
 import { Button, Container, Grid, Image, Text, Card } from '@nextui-org/react';
 
 interface Props {
-	pokemon: Pokemon;
+	pokemon: CompletePokemon;
 }
 
 const DetailsPage: NextPage<Props> = ({ pokemon }) => {
@@ -92,7 +92,7 @@ export async function getStaticPaths() {
 
 export const getStaticProps: GetStaticProps = async ({ params }) => {
 	const { id } = params as { id: string };
-	const { data } = await pokemon.get<Pokemon>(`/pokemon/${id}`);
+	const { data } = await pokemon.get<CompletePokemon>(`/pokemon/${id}`);
 
 	return {
 		props: {

@@ -23,8 +23,9 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx"
-, "styles/globals.ts", "_app.tsx"  ],
+, "styles/globals.ts"  ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "_app.tsx"
   ]
 }

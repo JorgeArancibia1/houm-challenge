@@ -30,6 +30,7 @@ const colors = {
 };
 
 const breakpoints = {
+	miniMobile: '300px',
 	mobile: '500px',
 };
 

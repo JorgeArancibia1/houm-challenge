@@ -5,11 +5,13 @@ export default css`
 	/* .vw100 {
 		width: 100vw;
 	} */
+	.nextui-c-dfbgCO-ijakZJF-css {
+		font-size: 0.5px !important;
+	}
 
-	@media (min-width: ${breakpoints.mobile}) {
-		/* .title {
-			margin: 0;
-			font-size: 3rem;
-		} */
+	@media (max-width: ${breakpoints.miniMobile}) {
+		.nextui-c-dfbgCO-ijakZJF-css > h1 {
+			font-size: 0.5px !important;
+		}
 	}
 `;

@@ -22,7 +22,16 @@ export const Header = () => {
 						</NextLink>
 					</Grid>
 					<Row fluid justify='center' align='center'>
-						<Text h1>
+						<Text
+							h1
+							css={{
+								'@xsMax': { fontSize: '1.5em' },
+								'@xs': { fontSize: '1.8em' },
+								'@sm': { fontSize: '2em' },
+								'@md': { fontSize: '2.3em' },
+								'@lg': { fontSize: '2.5em' },
+							}}
+						>
 							Poke-Houm{' '}
 							<Link href='./' color='primary'>
 								Challenge

@@ -28,7 +28,9 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
 							<strong> # </strong>
 							{id}
 						</Text>
-						<Text transform='capitalize'>{name}</Text>
+						<Text transform='capitalize'>
+							<strong>{name}</strong>
+						</Text>
 					</Row>
 				</Card.Footer>
 			</Card>

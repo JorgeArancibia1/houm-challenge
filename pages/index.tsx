@@ -11,7 +11,8 @@ interface Props {
 	pokemons: PokemonList[];
 }
 
-let quantity = 0;
+let quantity = 5;
+let from = 8;
 
 const Home: NextPage<Props> = ({ pokemons }) => {
 	// const [quantity, setQuantityPokes] = useState(2);
@@ -48,16 +49,15 @@ const Home: NextPage<Props> = ({ pokemons }) => {
 };
 
 export const getStaticProps: GetStaticProps = async (ctx) => {
-	console.log('Q => ', quantity);
-	quantity = 11;
 	const { data } = await pokemon.get<PokemonResult>(
-		`/pokemon?limit=${quantity}&offset=3`
+		`/pokemon?limit=${quantity}&offset=${from}`
 	);
 
 	const converterId = (data, i) => {
 		let a = [];
+		console.log('===>>> I ', i);
 
-		i < 9
+		data.results[i].url.substring(0, data.results[i].url.length - 1).substr(-1) < 9
 			? a.push(
 					data.results[i].url.substring(0, data.results[i].url.length - 1).substr(-1)
 			  )
@@ -79,10 +79,7 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 
 	const pokemons: PokemonList[] = data.results.map((p, i) => ({
 		...p,
-		id:
-			i >= 9
-				? parseInt(p.url.substring(0, p.url.length - 1).substr(-2))
-				: parseInt(p.url.substring(0, p.url.length - 1).substr(-1)),
+		id: i + from + 1,
 		img: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${converterId(
 			data,
 			i

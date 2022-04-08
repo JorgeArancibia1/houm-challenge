@@ -3,11 +3,10 @@ import { Layout } from '../components/Layout/Layout';
 import { NextPage, GetStaticProps } from 'next';
 import { pokemon } from '../api';
 import { Pokemon, AllPokemon } from '../interfaces';
-import { Grid } from '@nextui-org/react';
+import { Grid, Input, Pagination } from '@nextui-org/react';
 import { PokemonCard } from '../components/Pokemon';
-import { Pagination } from '@nextui-org/react';
 import { IncompletePokemon } from '../interfaces/pokemon';
-import { useEffect, useState } from 'react';
+import { useState, ChangeEvent } from 'react';
 import changePagination from '../utils';
 
 interface Props {
@@ -16,13 +15,24 @@ interface Props {
 
 const Home: NextPage<Props> = ({ pokemons }) => {
 	const [from, setFrom] = useState(0);
+	const [search, setSearch] = useState('');
 
 	const filteredPokemon = (): Pokemon[] => {
-		return pokemons.slice(from, from + 10);
+		if (search.length === 0) {
+			return pokemons.slice(from, from + 10);
+		}
+		const filtered = pokemons.filter((poke) => poke.name.includes(search));
+
+		return filtered.slice(from, from + 10);
 	};
 
 	const onChange = (e) => {
 		changePagination(e, setFrom);
+	};
+
+	const onSearchChange = ({ target }: ChangeEvent<HTMLInputElement>) => {
+		setFrom(0);
+		setSearch(target.value);
 	};
 
 	return (
@@ -34,13 +44,23 @@ const Home: NextPage<Props> = ({ pokemons }) => {
 			</Head>
 
 			<Layout>
-				<Pagination rounded onChange={onChange} total={5} initialPage={1} />
+				<Grid.Container gap={4}>
+					<Grid>
+						<Input
+							id='1312412213'
+							labelPlaceholder='Search'
+							// type='search'
+							value={search}
+							onChange={onSearchChange}
+						/>
+					</Grid>
+				</Grid.Container>
+				{!search && <Pagination rounded onChange={onChange} total={5} initialPage={1} />}
 				<Grid.Container gap={2} justify='flex-start'>
 					{filteredPokemon().map((pokemon) => (
 						<PokemonCard key={pokemon.id} pokemon={pokemon} />
 					))}
 				</Grid.Container>
-				<Pagination rounded onChange={onChange} total={5} initialPage={1} />
 			</Layout>
 		</>
 	);
@@ -58,7 +78,6 @@ export const getStaticProps: GetStaticProps = async (ctx) => {
 	): Pokemon[] => {
 		const pokemonArr: Pokemon[] = smallPokemonList.map(({ url, name }) => {
 			const pokeArr = url.split('/');
-			console.log(pokeArr);
 			const id = pokeArr[6];
 			const img = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/${id}.svg`;
 			return {

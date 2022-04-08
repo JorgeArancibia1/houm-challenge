@@ -21,7 +21,7 @@ const Home: NextPage<Props> = ({ pokemons }) => {
 		if (search.length === 0) {
 			return pokemons.slice(from, from + 10);
 		}
-		const filtered = pokemons.filter((poke) => poke.name.includes(search));
+		const filtered = pokemons.filter(({ name }) => name.includes(search));
 
 		return filtered.slice(from, from + 10);
 	};
@@ -44,12 +44,11 @@ const Home: NextPage<Props> = ({ pokemons }) => {
 			</Head>
 
 			<Layout>
-				<Grid.Container gap={4}>
+				<Grid.Container gap={4} justify='center'>
 					<Grid>
 						<Input
 							id='1312412213'
 							labelPlaceholder='Search'
-							// type='search'
 							value={search}
 							onChange={onSearchChange}
 						/>

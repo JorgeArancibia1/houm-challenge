@@ -1,31 +1,36 @@
-import Image from 'next/image';
 import NextLink from 'next/link';
-import { Link, Spacer } from '@nextui-org/react';
+import { Container, Link, Spacer, Text, Grid, Image, Row } from '@nextui-org/react';
 
 export const Header = () => {
 	return (
-		<header className='d-flex-around'>
-			<div className='ml-5'>
-				<NextLink href='/' passHref>
-					<Link>
-						<>
-							<Image
-								src='https://houm.com/static/brandImage/houmLogo.svg'
-								alt='Vercel Logo'
-								width={122}
-								height={70}
-							/>
-						</>
-					</Link>
-				</NextLink>
-			</div>
-			<Spacer css={{ flex: 1 }} />{' '}
-			<h1 className='title vw100'>
-				Poke-Houm{' '}
-				<Link href='./' color='primary'>
-					Challenge
-				</Link>
-			</h1>
-		</header>
+		<Container fluid responsive={true}>
+			<Row>
+				<Grid.Container gap={0} justify='center' alignItems='center' xs={12}>
+					<Grid justify='center' xs={12} sm={12} md={1} lg={1}>
+						<NextLink href='/' passHref>
+							<Link>
+								<>
+									<Image
+										src='https://houm.com/static/brandImage/houmLogo.svg'
+										alt='Houm Logo'
+										width={182}
+										height={70}
+										css={{ margin: 0 }}
+									/>
+								</>
+							</Link>
+						</NextLink>
+					</Grid>
+					<Row fluid justify='center' align='center'>
+						<Text h1>
+							Poke-Houm{' '}
+							<Link href='./' color='primary'>
+								Challenge
+							</Link>
+						</Text>
+					</Row>
+				</Grid.Container>
+			</Row>
+		</Container>
 	);
 };

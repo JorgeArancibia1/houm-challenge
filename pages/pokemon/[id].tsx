@@ -5,6 +5,7 @@ import { GetStaticProps, NextPage } from 'next';
 import { CompletePokemon } from '../../interfaces';
 import { pokemon } from '../../api';
 import { Button, Container, Grid, Image, Text, Card } from '@nextui-org/react';
+import { colors } from '../../styles/theme';
 
 interface Props {
 	pokemon: CompletePokemon;
@@ -37,7 +38,18 @@ const DetailsPage: NextPage<Props> = ({ pokemon }) => {
 							<Text h1 transform='capitalize'>
 								{pokemon.name}
 							</Text>
-							<Button color='gradient' ghost>
+							<Button
+								css={{
+									backgroundColor: colors.darkOrange,
+									color: 'white',
+									'@xsMax': { width: '1em' },
+									'@xs': { width: '1em' },
+									'@sm': { width: '1em' },
+									'@md': { width: '1.1em' },
+									'@lg': { width: '1.3em' },
+								}}
+								ghost
+							>
 								Guardar en favoritos
 							</Button>
 						</Card.Header>

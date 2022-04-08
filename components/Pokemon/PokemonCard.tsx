@@ -1,10 +1,10 @@
-import { PokemonList } from '../../interfaces';
+import { Pokemon } from '../../interfaces';
 import { FC } from 'react';
 import { Card, Grid, Row, Text } from '@nextui-org/react';
 import { useRouter } from 'next/router';
 
 interface Props {
-	pokemon: PokemonList;
+	pokemon: Pokemon;
 }
 
 export const PokemonCard: FC<Props> = ({ pokemon }) => {

@@ -91,7 +91,7 @@ const DetailsPage: NextPage<Props> = ({ pokemon }) => {
 
 // Se usa cuando la página tiene por nombre un argumento dinámico (Se generan las rutas y 1 html por cada parámetro que le indiquemos desde el servidor).
 export async function getStaticPaths() {
-	const pokemonId = [...Array(600)].map((num, index) => `${index + 1}`);
+	const pokemonId = [...Array(50)].map((num, index) => `${index + 1}`);
 	return {
 		// Paths que se generan en build-time
 		paths: pokemonId.map((id) => ({

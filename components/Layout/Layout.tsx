@@ -23,7 +23,6 @@ export const Layout: FC<Props> = ({ children, title }) => {
 			<Navbar />
 			<main className='main'>{children}</main>
 			<Footer />
-			<style jsx>{styles}</style>
 		</>
 	);
 };

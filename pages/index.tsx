@@ -9,7 +9,7 @@ import { PokemonCard } from '../components/Pokemon';
 import { IncompletePokemon } from '../interfaces/pokemon';
 import { useState, ChangeEvent } from 'react';
 interface Props {
-  pokemons: Pokemon[]
+	pokemons: Pokemon[];
 }
 
 const Home: NextPage<Props> = ({ pokemons }) => {
@@ -38,24 +38,28 @@ const Home: NextPage<Props> = ({ pokemons }) => {
 		<>
 			<Head>
 				<title>Houm Challenge</title>
-				<meta name="author" content="Jorge Arancibia" />
-				<link rel="icon" href="https://houm.com/static/brandImage/houmLogo.svg" />
+				<meta name='author' content='Jorge Arancibia' />
+				<link rel='icon' href='https://houm.com/static/brandImage/houmLogo.svg' />
 			</Head>
 
 			<Layout>
-				<Grid.Container gap={4} justify="center">
+				<Grid.Container gap={4} justify='center'>
 					<Grid>
-						<Input labelPlaceholder="Search" value={search} onChange={onSearchChange} />
+						<Input labelPlaceholder='Search' value={search} onChange={onSearchChange} />
 					</Grid>
 				</Grid.Container>
 
-				<Grid.Container gap={2} justify="flex-start">
+				<Grid.Container gap={2} justify='flex-start'>
 					{filteredPokemon().map(pokemon => (
 						<PokemonCard key={pokemon.id} pokemon={pokemon} />
 					))}
 				</Grid.Container>
-				<Grid.Container gap={2} justify="center">
-					<Grid>{!search && <Pagination rounded onChange={onChange} total={5} initialPage={1} />}</Grid>
+				<Grid.Container gap={2} justify='center'>
+					<Grid>
+						{!search && (
+							<Pagination rounded onChange={onChange} total={5} initialPage={1} />
+						)}
+					</Grid>
 				</Grid.Container>
 			</Layout>
 		</>
@@ -69,7 +73,9 @@ export const getStaticProps: GetStaticProps = async () => {
 		return transformSmallPokemonIntoPokemon(smallPokemonList);
 	};
 
-	const transformSmallPokemonIntoPokemon = (smallPokemonList: IncompletePokemon[]): Pokemon[] => {
+	const transformSmallPokemonIntoPokemon = (
+		smallPokemonList: IncompletePokemon[]
+	): Pokemon[] => {
 		const pokemonArr: Pokemon[] = smallPokemonList.map(({ url, name }) => {
 			const pokeArr = url.split('/');
 			const id = pokeArr[6];

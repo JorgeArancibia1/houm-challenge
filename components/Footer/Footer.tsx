@@ -3,7 +3,7 @@ import { colors } from '../../styles/theme';
 
 export const Footer = () => {
 	return (
-		<Grid.Container gap={4} justify="center">
+		<Grid.Container gap={4} justify='center'>
 			<Grid>
 				<Text
 					b
@@ -15,10 +15,10 @@ export const Footer = () => {
 						'@lg': { fontSize: '1.2rem' },
 					}}
 				>
-          Made by
+					Made by
 				</Text>
 				<Link
-					href="https://github.com/JorgeArancibia1"
+					href='https://github.com/JorgeArancibia1'
 					css={{
 						color: colors.darkOrange,
 						fontWeight: 'bold',
@@ -29,7 +29,7 @@ export const Footer = () => {
 						'@lg': { fontSize: '1.2rem' },
 					}}
 				>
-          &nbsp;Jorge Arancibia&nbsp;
+					&nbsp;Jorge Arancibia&nbsp;
 				</Link>
 				<Text
 					b
@@ -41,9 +41,14 @@ export const Footer = () => {
 						'@lg': { fontSize: '1.2rem' },
 					}}
 				>
-          with ❤️ for
+					with ❤️ for
 				</Text>
-				<Image src="https://houm.com/static/brandImage/houmLogo.svg" alt="Vercel Logo" width={82} height={36} />
+				<Image
+					src='https://houm.com/static/brandImage/houmLogo.svg'
+					alt='Vercel Logo'
+					width={82}
+					height={36}
+				/>
 				{/* <Text span>❤️</Text> */}
 			</Grid>
 		</Grid.Container>

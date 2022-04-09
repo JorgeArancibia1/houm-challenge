@@ -17,10 +17,10 @@ export const PokemonCard: FC<Props> = ({ pokemon }) => {
 	};
 
 	return (
-		<Grid xs={12} sm={6} md={2} xl={1}>
+		<Grid xs={12} sm={6} md={2} xl={2}>
 			<Card hoverable clickable onClick={onClick}>
 				<Card.Body css={{ p: 1 }}>
-					<Card.Image src={img} width='100%' height={200} />
+					<Card.Image src={img} width='100%' height={140} />
 				</Card.Body>
 				<Card.Footer>
 					<Row justify='space-between'>

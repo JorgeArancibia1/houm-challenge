@@ -49,13 +49,4 @@ export const globalStyles = css.global`
 		color: inherit;
 		text-decoration: none !important;
 	}
-	* {
-		box-sizing: border-box;
-	}
-	ul,
-	li {
-		list-style: none;
-		display: flex;
-		margin: 0 15px;
-	}
 `;

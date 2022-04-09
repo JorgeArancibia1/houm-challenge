@@ -54,11 +54,18 @@ const Home: NextPage<Props> = ({ pokemons }) => {
 						/>
 					</Grid>
 				</Grid.Container>
-				{!search && <Pagination rounded onChange={onChange} total={5} initialPage={1} />}
+
 				<Grid.Container gap={2} justify='flex-start'>
 					{filteredPokemon().map((pokemon) => (
 						<PokemonCard key={pokemon.id} pokemon={pokemon} />
 					))}
+				</Grid.Container>
+				<Grid.Container gap={2} justify='center'>
+					<Grid>
+						{!search && (
+							<Pagination rounded onChange={onChange} total={5} initialPage={1} />
+						)}
+					</Grid>
 				</Grid.Container>
 			</Layout>
 		</>

@@ -1,5 +1,5 @@
-import css from 'styled-jsx/css'
-import { colors, fonts, margin } from './theme'
+import css from 'styled-jsx/css';
+import { colors, fonts, margin } from './theme';
 
 export const globalStyles = css.global`
   .orange {
@@ -49,4 +49,4 @@ export const globalStyles = css.global`
     color: inherit;
     text-decoration: none !important;
   }
-`
+`;

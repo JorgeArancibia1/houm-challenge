@@ -4,11 +4,10 @@ import changePagination from '../utils';
 import { Layout } from '../components/Layout/Layout';
 import { pokemon } from '../api';
 import { Pokemon, AllPokemon } from '../interfaces';
-import { Grid, Input, Pagination } from '@nextui-org/react';
+import { Grid, Input, Pagination, useTheme } from '@nextui-org/react';
 import { PokemonCard } from '../components/Pokemon';
 import { IncompletePokemon } from '../interfaces/pokemon';
 import { useState, ChangeEvent } from 'react';
-
 interface Props {
 	pokemons: Pokemon[];
 }

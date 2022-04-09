@@ -8,7 +8,6 @@ export const Footer = () => {
 				<Text
 					b
 					css={{
-						color: colors.blackFont,
 						'@xsMax': { fontSize: '0.8rem' },
 						'@xs': { fontSize: '0.9rem' },
 						'@sm': { fontSize: '1rem' },
@@ -35,7 +34,6 @@ export const Footer = () => {
 				<Text
 					b
 					css={{
-						color: colors.blackFont,
 						'@xsMax': { fontSize: '0.8rem' },
 						'@xs': { fontSize: '0.9rem' },
 						'@sm': { fontSize: '1rem' },

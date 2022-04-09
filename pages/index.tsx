@@ -45,12 +45,7 @@ const Home: NextPage<Props> = ({ pokemons }) => {
 			<Layout>
 				<Grid.Container gap={4} justify='center'>
 					<Grid>
-						<Input
-							id='1312412213'
-							labelPlaceholder='Search'
-							value={search}
-							onChange={onSearchChange}
-						/>
+						<Input labelPlaceholder='Search' value={search} onChange={onSearchChange} />
 					</Grid>
 				</Grid.Container>
 

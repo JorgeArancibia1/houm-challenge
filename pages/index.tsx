@@ -1,13 +1,13 @@
-import Head from 'next/head';
-import { Layout } from '../components/Layout/Layout';
 import { NextPage, GetStaticProps } from 'next';
+import Head from 'next/head';
+import changePagination from '../utils';
+import { Layout } from '../components/Layout/Layout';
 import { pokemon } from '../api';
 import { Pokemon, AllPokemon } from '../interfaces';
 import { Grid, Input, Pagination } from '@nextui-org/react';
 import { PokemonCard } from '../components/Pokemon';
 import { IncompletePokemon } from '../interfaces/pokemon';
 import { useState, ChangeEvent } from 'react';
-import changePagination from '../utils';
 
 interface Props {
 	pokemons: Pokemon[];

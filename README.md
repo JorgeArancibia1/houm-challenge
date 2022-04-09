@@ -1,34 +1,37 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Poke-Houm en Next.js
 
-## Getting Started
+## ¿Qué se hizo?
 
-First, run the development server:
+La aplicación consiste en recopilar datos de la api de Pokemon llamada “PokeApi” y mostrarlos de una forma atractiva visualmente, con estos datos se puede hacer lo siguiente:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+1. Ver una cantidad de 50 elementos listados en la página principal
+2. Al hacer click en algún elemento, este lo deriva a una página dinámica, la cual va a variar según el pokemon seleccionado, esta página mostrará datos del pokemon en específicado.
+3. La web cuenta con un buscador para encontrar coincidencias por el nombre del pokemon
+4. Además cuenta con un paginador con 5 secciones separados en 10 elementos cada uno.
+5. Adicionalmente se le implementó un switch para alternar al modo oscuro
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## ¿Qué se usó para construirla?
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+### Framework
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+Se construyó **Next.js**, un framework de **React**.
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+### Estilos
 
-## Learn More
+Para los estilos se ocupó “**styled jsx**” un elemento ya incorporado en la librería para aprovechar el uso estilos globales que este nos provee, una librería de React llamada “**NextUi**”.
 
-To learn more about Next.js, take a look at the following resources:
+### Typescript
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Se usó **Typescript** para escribir el código, un lenguaje de programación fuertemente tipado que se basa en JavaScript.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### Estructura de código
 
-## Deploy on Vercel
+Se utilizó **Eslint** y **prettier** para el orden y así asegurar un código ordenado y limpio.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Deploy
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+LA aplicación fue deployada en Github y en Vercel, este puede verse en el siguiente link: 
+
+ 
+
+[¿Quién es ese pokemon?](https://houm-challenge-i9uwg7clq-jorgearancibiajeal-gmailcom.vercel.app/)

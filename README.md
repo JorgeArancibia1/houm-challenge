@@ -34,4 +34,4 @@ LA aplicación fue deployada en Github y en Vercel, este puede verse en el sigui
 
  
 
-[¿Quién es ese pokemon?](https://houm-challenge-i9uwg7clq-jorgearancibiajeal-gmailcom.vercel.app/)
+(https://houm-challenge-i9uwg7clq-jorgearancibiajeal-gmailcom.vercel.app/)

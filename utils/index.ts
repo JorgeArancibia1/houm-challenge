@@ -1,1 +1,1 @@
-export { default } from './changePagination';
+export { default } from './changePagination'

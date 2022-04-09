@@ -30,8 +30,6 @@ Se utilizó **Eslint** y **prettier** para el orden y así asegurar un código o
 
 ### Deploy
 
-LA aplicación fue deployada en Github y en Vercel, este puede verse en el siguiente link: 
-
- 
+LA aplicación fue deployada en Github y en Vercel, este puede verse en el siguiente link:
 
 (https://houm-challenge-i9uwg7clq-jorgearancibiajeal-gmailcom.vercel.app/)

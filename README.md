@@ -9,6 +9,7 @@ La aplicación consiste en recopilar datos de la api de Pokemon llamada “PokeA
 3. La web cuenta con un buscador para encontrar coincidencias por el nombre del pokemon
 4. Además cuenta con un paginador con 5 secciones separados en 10 elementos cada uno.
 5. Adicionalmente se le implementó un switch para alternar al modo oscuro
+6. *El botón para ir a la página de Home se implementó en el Logo superior de Houm*
 
 ## ¿Qué se usó para construirla?
 

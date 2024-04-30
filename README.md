@@ -33,4 +33,4 @@ Se utilizó **Eslint** y **prettier** para el orden y así asegurar un código o
 
 LA aplicación fue deployada en Github y en Vercel, este puede verse en el siguiente link:
 
-[Poke-appi](https://poke-app-lac.vercel.app/)
+[Poke-app](https://poke-app-lac.vercel.app/)

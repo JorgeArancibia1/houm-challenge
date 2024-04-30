@@ -33,4 +33,4 @@ Se utilizó **Eslint** y **prettier** para el orden y así asegurar un código o
 
 LA aplicación fue deployada en Github y en Vercel, este puede verse en el siguiente link:
 
-[https://houm-challenge-i9uwg7clq-jorgearancibiajeal-gmailcom.vercel.app/](https://poke-app-lac.vercel.app/)
+[Poke-appi](https://poke-app-lac.vercel.app/)
